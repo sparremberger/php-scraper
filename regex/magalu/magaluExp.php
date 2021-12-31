@@ -1,4 +1,6 @@
 <?php
+require_once './regex/Exp.php';
+
 class MagaluExp extends Expression
 {
     private $exp = array(); // Array contendo as expressões

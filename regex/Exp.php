@@ -8,7 +8,7 @@ abstract class Expression
 
     abstract public function run($rawData); // função que irá realizar o serviço da classe
 
-    abstract protected function output($output); // Define o que será feito com cada saída de dados, e.g. colocar num json, exibir na tela, etc.
+    abstract protected function output($output); // Define o que será feito com cada saída de dados, e.g. colocar num json, exibir na tela, etc
 
     protected function applyRegex($re, $str) // aplica o regex
     {
