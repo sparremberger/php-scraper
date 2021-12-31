@@ -11,17 +11,17 @@ class Downloader
     // Dois campos privados. O browser, e os dados crús obtidos via http GET.
     private $browser;
     private $data;
+    private $url;
 
-
-    function __construct()
+    function __construct($url, $headerString)
     {
         $this->browser = new SimpleBrowser();
-        $this->setHeaders();
+        $this->setHeaders($headerString);
     }
 
-    function setHeaders()
+    function setHeaders($headerString)
     {
-        $headers = explode('|', getenv('HEADERS')); // separa os headers do arquivo .env e põe num array
+        $headers = explode('|', $headerString); // separa os headers do arquivo .env e põe num array
         foreach ($headers as $header) {
             $this->browser->addHeader($header);
         }
@@ -30,7 +30,7 @@ class Downloader
     // Executa o GET na página indicada e salva os dados em um arquivo
     function run()
     {
-        $this->data = $this->browser->get(getenv('URL_TO_SCRAPE'));
+        $this->data = $this->browser->get($this->url);
 
         if ((int) filter_var(getenv('USE_OUTPUT_FILE'), FILTER_VALIDATE_BOOLEAN)) { // essa linha verifica se o conteúdo da string é equivalente a um boolean (true ou false)
             file_put_contents(

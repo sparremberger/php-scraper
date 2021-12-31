@@ -5,6 +5,8 @@
 abstract class Expression
 {
     private $exp; // um array associativo de expressões regulares a serem usadas
+    public $url;
+    public $headers;
 
     abstract public function run($rawData); // função que irá realizar o serviço da classe
 
