@@ -7,3 +7,5 @@ Edite o arquivo .env para inserir sua página desejada em URL_TO_SCRAPE
 Em HEADERS, acrescente todos os headers que desejar, separando-os com |
 Se desejar gravar o resultado em um arquivo de saída, insira TRUE em USE_OUTPUT_FILE e insira um nome de arquivo em OUTPUT_FILE
 Por fim, acesse o index.php em seu servidor apache.
+
+Você também pode adicionar novos scripts para diferentes sites. No momento o único existente é o do site do Magazine Luiza. Utilize o modelo como referência.
