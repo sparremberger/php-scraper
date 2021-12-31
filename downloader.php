@@ -17,6 +17,7 @@ class Downloader
     {
         $this->browser = new SimpleBrowser();
         $this->setHeaders($headerString);
+        $this->url = $url;
     }
 
     function setHeaders($headerString)
