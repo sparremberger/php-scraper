@@ -17,7 +17,7 @@ class MagaluExp extends Expression
         $this->exp['ImgUrlEXP'] = '/http[\w\W]{1,300}.jpg/m';
 
         $this->url = 'https://www.magazineluiza.com.br/busca/computadores/';
-        $this->headers = ''; //'Accept: application/json, text/javascript, */*; q=0.01|Referer: https://www.magazineluiza.com.br/|User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:95.0) Gecko/20100101 Firefox/95.0';
+        $this->headers = 'Accept: application/json, text/javascript, */*; q=0.01|Referer: https://www.magazineluiza.com.br/|User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:95.0) Gecko/20100101 Firefox/95.0';
     }
 
     public function run($rawData) // recebe os dados crús e inicia o processamento

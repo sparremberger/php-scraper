@@ -8,6 +8,7 @@ $exp = new AmericanasExp();
 $downloader = new Downloader($exp->url, $exp->headers);
 $downloader->run();
 $data = $downloader->rawData();
+die($data);
 
 $processor = new Processor($data, $exp);
 $processor->run();
