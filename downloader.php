@@ -12,7 +12,6 @@ class Downloader
     private $browser;
     private $data;
 
-
     // Construtor da classe, inicializa o SimpleBrowser e seta os headers
     function __construct()
     {
@@ -40,7 +39,6 @@ class Downloader
             );
         }
     }
-
 
     // Lê o arquivo salvo e retorna os dados
     function rawData()
